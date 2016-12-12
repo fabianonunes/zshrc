@@ -29,6 +29,10 @@ function set-proxy-external {
   _set-proxy $PROXY_EXTERNAL
 }
 
+function unset-proxy {
+	_set-proxy ""
+}
+
 function ak47 {
   PORT=${1:-8080} 
   PID=$(lsof -i tcp:$PORT | grep LISTEN | awk '{ print $2 }')
