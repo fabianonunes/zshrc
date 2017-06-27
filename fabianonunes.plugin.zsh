@@ -22,7 +22,8 @@ function _set-proxy {
 }
 
 function set-proxy-local {
-  _set-proxy "http://localhost:3128"
+	 [[ -n "$1" ]] && port=$1 || port="3128"
+	_set-proxy "http://localhost:$port"
 }
 
 function set-proxy-external {
