@@ -3,7 +3,7 @@ hash setxkbmap 2>/dev/null && setxkbmap -option ctrl:nocaps
 bindkey "${key[Up]}" history-beginning-search-backward
 bindkey "${key[Down]}" history-beginning-search-forward
 
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root cursor)
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta,bold'
 
 function o {
