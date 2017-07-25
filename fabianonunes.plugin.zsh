@@ -41,7 +41,7 @@ function ak47 {
 }
 
 function add-key {
-  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com \
+  sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com \
   --keyserver-options http-proxy="$HTTPS_PROXY" "$1"
 }
 
