@@ -27,7 +27,7 @@ function set-proxy-local {
 }
 
 function set-proxy-external {
-  _set-proxy $PROXY_EXTERNAL
+  _set-proxy "$PROXY_EXTERNAL"
 }
 
 function unset-proxy {
@@ -35,9 +35,9 @@ function unset-proxy {
 }
 
 function ak47 {
-  PORT=${1:-8080} 
-  PID=$(lsof -i tcp:$PORT | grep LISTEN | awk '{ print $2 }')
-  [[ -n $PID ]] && (echo $PID | xargs kill -9)
+  PORT=${1:-8080}
+  PID=$(lsof -i tcp:"$PORT" | grep LISTEN | awk '{ print $2 }')
+  [[ -n $PID ]] && (echo "$PID" | xargs kill -9)
 }
 
 alias ak=ak47 
