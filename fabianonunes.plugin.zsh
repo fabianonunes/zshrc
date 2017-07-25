@@ -40,7 +40,12 @@ function ak47 {
   [[ -n $PID ]] && (echo "$PID" | xargs kill -9)
 }
 
-alias ak=ak47 
+function add-key {
+  apt-key adv --recv-keys --keyserver keyserver.ubuntu.com \
+  --keyserver-options http-proxy="$HTTPS_PROXY" "$1"
+}
+
+alias ak=ak47
 alias gri='git ls-files --ignored --exclude-standard | xargs git rm'
 alias foda-se='git reset --hard HEAD && git clean -fd'
 alias reswap='sudo bash -c "swapoff -a && swapon -a"'
