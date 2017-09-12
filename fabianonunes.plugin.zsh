@@ -22,8 +22,8 @@ function _set-proxy {
 }
 
 function set-proxy-local {
-	 [[ -n "$1" ]] && port=$1 || port="3128"
-	_set-proxy "http://localhost:$port"
+  [[ -n "$1" ]] && port=$1 || port="3128"
+  _set-proxy "http://localhost:$port"
 }
 
 function set-proxy-external {
@@ -31,7 +31,8 @@ function set-proxy-external {
 }
 
 function unset-proxy {
-	_set-proxy ""
+  _set-proxy ""
+  unset no_proxy
 }
 
 function ak47 {
