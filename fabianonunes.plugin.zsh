@@ -46,6 +46,10 @@ function add-key {
   --keyserver-options http-proxy="$HTTPS_PROXY" "$1"
 }
 
+function = {
+  echo "$@" | bc -l
+}
+
 alias ak=ak47
 alias gri='git ls-files --ignored --exclude-standard | xargs git rm'
 alias foda-se='git reset --hard HEAD && git clean -fd'
