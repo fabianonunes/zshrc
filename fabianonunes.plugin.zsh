@@ -53,6 +53,10 @@ function = {
 alias ak=ak47
 alias gri='git ls-files --ignored --exclude-standard | xargs git rm'
 alias foda-se='git reset --hard HEAD && git clean -fd'
-alias reswap='sudo bash -c "swapoff -a && swapon -a"'
+
+function reswap {
+  sudo bash -c "swapoff -a && swapon -a"
+  [[ -e /dev/zram0 ]] && sudo swapon /dev/zram*
+}
 
 eval "$(fasd --init auto)"
