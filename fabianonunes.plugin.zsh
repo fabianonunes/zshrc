@@ -56,7 +56,7 @@ alias foda-se='git reset --hard HEAD && git clean -fd'
 
 function reswap {
   if [[ -e /dev/zram0 ]]; then
-    ls /dev/zram* | sudo parallel swapoff
+    find /dev -name 'zram*' | sudo parallel swapoff
   fi
   sudo bash -c "swapoff -a && swapon -a"
   [[ -e /dev/zram0 ]] && sudo swapon /dev/zram*
