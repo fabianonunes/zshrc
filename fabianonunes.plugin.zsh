@@ -46,8 +46,8 @@ function add-key {
   --keyserver-options http-proxy="$HTTPS_PROXY" "$1"
 }
 
-function = {
-  echo "$@" | bc -l
+function lb () {
+  $EDITOR ~/logbook/"$(date '+%Y-%m-%d')".md
 }
 
 alias ak=ak47
