@@ -1,3 +1,4 @@
+set -o noclobber
 
 hash setxkbmap 2>/dev/null && setxkbmap -option ctrl:nocaps
 bindkey "${key[Up]}" history-beginning-search-backward
