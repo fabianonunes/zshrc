@@ -48,7 +48,7 @@ function add-key {
 }
 
 function lb () {
-  $EDITOR ~/logbook/"$(date '+%Y-%m-%d')".md
+  $EDITOR ~/Dropbox/logbook/"$(date '+%Y-%m-%d')".md
 }
 
 alias ak=ak47
