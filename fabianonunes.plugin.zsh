@@ -69,4 +69,8 @@ function reswap {
   [[ -e /dev/zram0 ]] && sudo swapon /dev/zram*
 }
 
+export PURE_PROMPT_SYMBOL="%B›%b"
+export EDITOR=micro
+export GOPATH=$HOME/.go
+
 eval "$(fasd --init auto)"
