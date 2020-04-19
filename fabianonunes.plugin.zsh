@@ -74,3 +74,6 @@ export EDITOR=micro
 export GOPATH=$HOME/.go
 
 eval "$(fasd --init auto)"
+eval "$(direnv hook zsh)"
+
+source ~/.fzf.zsh
