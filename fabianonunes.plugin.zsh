@@ -56,6 +56,10 @@ function lb () {
 alias ak=ak47
 alias gri='git ls-files --ignored --exclude-standard | xargs git rm'
 alias foda-se='git reset --hard HEAD && git clean -fd'
+alias kb='kill -9 %1'
+alias k='kubectl'
+alias fd=fdfind
+alias gpot='git push --tags origin develop master'
 
 function reswap {
   if [[ -e /dev/zram0 ]]; then
