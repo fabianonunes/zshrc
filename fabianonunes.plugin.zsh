@@ -60,6 +60,7 @@ alias kb='kill -9 %1'
 alias k='kubectl'
 alias fd=fdfind
 alias gpot='git push --tags origin develop master'
+alias sudo='sudo '
 
 function reswap {
   if [[ -e /dev/zram0 ]]; then
