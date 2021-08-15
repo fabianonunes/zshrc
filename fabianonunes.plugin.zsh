@@ -1,6 +1,17 @@
 set -o noclobber
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_SPACE
 setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_VERIFY
+setopt HIST_BEEP
 
 #hash setxkbmap 2>/dev/null && setxkbmap -option ctrl:nocaps
 bindkey "${key[Up]}" history-beginning-search-backward
