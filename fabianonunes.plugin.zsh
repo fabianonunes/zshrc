@@ -16,11 +16,10 @@ setopt HIST_BEEP
 #hash setxkbmap 2>/dev/null && setxkbmap -option ctrl:nocaps
 
 # no zplug, a variável $key não está inicializada. usar terminfo
-# bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
-# bindkey "${terminfo[kcud1]}" history-beginning-search-forward
-
-bindkey "${key[Up]}" history-beginning-search-backward
-bindkey "${key[Down]}" history-beginning-search-forward
+# bindkey "${key[Up]}" history-beginning-search-backward
+# bindkey "${key[Down]}" history-beginning-search-forward
+bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
+bindkey "${terminfo[kcud1]}" history-beginning-search-forward
 
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta,bold'
