@@ -85,5 +85,4 @@ alias fd=fdfind
 alias gpot='git push --tags origin develop master'
 alias sudo='sudo '
 
-export PURE_PROMPT_SYMBOL="%B›%b"
 export GOPATH=$HOME/.go
