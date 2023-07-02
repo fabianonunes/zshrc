@@ -68,6 +68,14 @@ function lb () {
   $EDITOR ~/Dropbox/logbook/"$(date '+%Y-%m-%d')".md
 }
 
+function reswap {
+  if [[ -e /dev/zram0 ]]; then
+    find /dev -name 'zram*' | sudo parallel swapoff
+  fi
+  sudo bash -c "swapoff -a && swapon -a"
+  [[ -e /dev/zram0 ]] && sudo swapon /dev/zram*
+}
+
 alias ak=ak47
 alias gri='git ls-files --ignored --exclude-standard | xargs git rm'
 alias foda-se='git reset --hard HEAD && git clean -fd'
@@ -76,14 +84,6 @@ alias k='kubectl'
 alias fd=fdfind
 alias gpot='git push --tags origin develop master'
 alias sudo='sudo '
-
-function reswap {
-  if [[ -e /dev/zram0 ]]; then
-    find /dev -name 'zram*' | sudo parallel swapoff
-  fi
-  sudo bash -c "swapoff -a && swapon -a"
-  [[ -e /dev/zram0 ]] && sudo swapon /dev/zram*
-}
 
 export PURE_PROMPT_SYMBOL="%B›%b"
 export GOPATH=$HOME/.go
