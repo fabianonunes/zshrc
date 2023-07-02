@@ -24,9 +24,10 @@ bindkey "${terminfo[kcud1]}" history-beginning-search-forward
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta,bold'
 
-function o {
+function _o {
   xdg-open "$@" &> /dev/null
 }
+alias o=_o
 
 function proxyify {
   env http_proxy="" https_proxy="" proxychains "$@"
