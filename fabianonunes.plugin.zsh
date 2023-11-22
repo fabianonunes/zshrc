@@ -56,8 +56,7 @@ function unset-proxy {
 
 function ak47 {
   PORT=${1:-8080}
-  PID=$(lsof -i tcp:"$PORT" | grep LISTEN | awk '{ print $2 }')
-  [[ -n $PID ]] && (echo "$PID" | xargs kill -9)
+  fuser -k "$PORT"/tcp
 }
 
 function add-key {
