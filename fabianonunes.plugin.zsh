@@ -24,6 +24,9 @@ bindkey "${terminfo[kcud1]}" history-beginning-search-forward
 # ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern root)
 # ZSH_HIGHLIGHT_STYLES[globbing]='fg=magenta,bold'
 
+# configura alt+c do fzf para só exibir diretórios no primeiro nível
+export FZF_ALT_C_COMMAND="fd --type d --max-depth 1"
+
 alias o="xdg-open"
 
 function proxyify {
